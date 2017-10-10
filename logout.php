@@ -1,0 +1,9 @@
+<?php
+ob_start();
+session_start();
+unset($_SESSION['hospital']);
+session_destroy();
+session_cache_expire();
+header('Location:hospitallog.php');
+exit();
+?>

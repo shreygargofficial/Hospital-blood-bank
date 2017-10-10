@@ -1,0 +1,10 @@
+<?php
+session_start();
+ob_start();
+unset($_SESSION['admin']);
+session_abort();
+session_destroy();
+session_cache_expire();
+header('Location:mainadminlog.php');
+exit();
+?>
