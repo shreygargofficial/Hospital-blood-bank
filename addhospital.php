@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")
 		$error="Name Already Exist";
 		else
 		{
-			if(!$conn->query("insert into hospital values('','$name','$email','$password','$contact')"))
+			if(!$conn->query("INSERT INTO hospital (name, email, password, telephone) VALUES ('$name', '$email', '$password', '$contact')"))
 			die($conn->error);
 			echo '<script>alert("Added Successfully!");</script>';
 			  header('Location:mainadmin.php');

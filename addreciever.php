@@ -36,7 +36,7 @@ die($conn->error);
           }
             if($error=="")
             {
-                $sql="insert into reciever values('','$age','$name','$blood','$sex','$contact','$quantity','$date','$hid')";
+              $sql = "INSERT INTO reciever (age, name, blood_type, sex, contact, quantity, rdate, hid) VALUES ('$age', '$name', '$blood', '$sex', '$contact', '$quantity', '$date', '$hid')";
                 if(!$conn->query($sql))
                 die($conn->error);
                 else

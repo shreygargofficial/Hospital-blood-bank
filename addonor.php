@@ -19,7 +19,7 @@ die($conn->error);
             $date=$_POST['date'];
             $blood =$_POST['blood'];
             $contact=$_POST['contact'];
-            $sql="insert into donor values('','$age','$name','$blood','$sex','$contact','$quantity','$date','$hid')";
+            $sql= "INSERT INTO donor (age, name, blood_type, sex, contact, dquantity, ddate, hid) VALUES ('$age', '$name', '$blood', '$sex', '$contact', '$quantity', '$date', '$hid')";
             if(!$conn->query($sql))
             die($conn->error);
             else
